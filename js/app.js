@@ -15,6 +15,12 @@
           controller: 'NotesCreateController',
           controllerAs: 'createController'
         })
+        // params id
+        .when('/notes/:id', {
+          templateUrl: 'templates/pages/notes/show.html',
+          controller: 'NotesShowController',
+          controllerAs: 'showController'
+        })
         .when('/', {
           redirectTo: '/users'
         })
