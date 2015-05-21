@@ -11,7 +11,9 @@
           // = mean two data binding
           header: '=',
           description: '=',
-          tweeted: '='
+          tweeted: '=',
+          body: '=',
+          image: '='
         },
         // link function takes in scope, element, attr
         // this way it searches the directive after everything is loaded

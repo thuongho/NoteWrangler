@@ -3,10 +3,11 @@
 
 	<div class="users-wrapper">
 		<a href="" class="card-users" ng-repeat="user in users">
-			<div class="card" title="{{user.name}}">
-				<h2 class="h3">{{user.name}}</h2>
-				<p>{{user.bio}}</p>
-			</div>
+			<nw-card header="user.name"
+								image="Gravatar.generate(user.email)"
+								body="user.bio"
+								id="user.id"?>
+			</nw-card>
 		</a>
 	</div>
 	
