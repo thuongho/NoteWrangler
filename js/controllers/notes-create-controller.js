@@ -9,7 +9,21 @@
       Note.create()
         .catch(function(note){
           controller.errors = note.data.errors;
-        })
+        });
+
+      // instead of Note.create
+      $scope.note = new Note();
+      $scope.saveNote = function(note) {
+        $scope.errors = null;
+        $scope.updating = true;
+        note.$save(note)
+          .catch(function(note) {
+            $scope.errors = note.data.errors;
+          }).finally(function(){
+            $scope.updating = false;
+          });
+      };
+      
     };
   }]);
 }());
