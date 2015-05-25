@@ -1,6 +1,6 @@
 (function(){
   angular.module('NoteWrangler',['ngRoute'])
-    .config(['$routeProvider', function($routeProvider){
+    .config(['$routeProvider', function($routeProvider, GravatarProvider){
       $routeProvider
         .when('/notes', {
           templateUrl: 'templates/pages/notes/index.html',
@@ -27,5 +27,7 @@
         .otherwise({
           redirectTo: '/notes'
         });
-    }]);
+
+      GravatarProvider.setSize(100);
+    }])
 }());
